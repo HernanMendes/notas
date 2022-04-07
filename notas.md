@@ -41,9 +41,13 @@ A diferencia de una máquina virtual, Docker, en vez de creat dodo un nuevo sist
 
 ![docker_vs_vm](https://s3.amazonaws.com/oodles-technologies1/blog-images/af7d2186-b715-4f67-992a-c34a2c180eb7.jpeg)
 
+
 [Docker para todes](https://docs.google.com/presentation/d/1MZ2QnAZ99AbhCXh8hvAzGdG9YJQaZT5R2WwhITITw48/edit?usp=sharing)
+
 [Docker_introduccion](https://drive.google.com/file/d/17P98VrLISI3zWPmpYBsAySNYzBHL1u9q/view?usp=sharing)
+
 [Instalacion](https://phoenixnap.com/kb/install-docker-on-ubuntu-20-04)
+
 ---
 ## _Torrent_
 Date: 2022-03-11
