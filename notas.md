@@ -302,6 +302,40 @@ Date: 2022-04-01
 - Do you plan to display Tweets or aggregate data about Twitter content outside Twitter? Please describe how and where Tweets and/or data about Twitter content will be displayed outside of Twitter.
 - Will your product, service, or analysis make Twitter content or derived information available to a government entity? Please list all government entities you intend to provide Twitter content or derived information to under this use case.
 
+## _pandas.DataFrame.explode_
+Date: 2022-04-07
+
+Transforma todos los elementos de una lista (or *list-like*) en una fila y replica los índices.
+
+```python
+df['SplitTitle'] = df['Title'].apply(lambda x : x.split(' '))
+
+df = df.explode('SplitTitle')
+
+df.loc[1]
+```
+
+[Documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.explode.html)
+
+---
+
+## _Regular Expressions (RegEx)_
+Date: 2022-04-08
+
+Define a search pattern that can be used to search for things in a string.
+  
+[freeCodeCamp Video](https://www.youtube.com/watch?v=ZfQFUJhPqMM)
+
+
+---
+## _Natural Language Processing (NLP)_
+Date: 2022-04-08
+
+Se refiere a la rama de la IA que se ocupa de darle a las computadoras la habilidad de entender texto y palabras escritas de la misma manera que lo pueden hacer los seres humanos.
+  
+[Fuente - IB;](https://www.ibm.com/cloud/learn/natural-language-processing)
+
+---
 
 ## _Title_
 Date: 2022-03-14
@@ -322,8 +356,6 @@ Azzure?
 AWS?
 VPN?
 Pipeline?
-regex?
-NPL?
 PEP8?
 global python
 html.unescape python
