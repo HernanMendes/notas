@@ -336,7 +336,35 @@ Se refiere a la rama de la IA que se ocupa de darle a las computadoras la habili
 [Fuente - IB;](https://www.ibm.com/cloud/learn/natural-language-processing)
 
 ---
+## _Error Handling - Python_
+Date: 2022-04-20
 
+```python
+try:
+    f = open('test_file.txt') #this file exist
+    
+    if f.name == 'currupt_file.txt':
+        raise Exception     # Raise our own exceptions
+    
+    var = bad_var   #NameError exception
+except FileNotFoundError:   #catch this first if file not exist
+    print('Sorry! This file does not exist')
+except Exception as e:  # catch any exception
+    print('Sorry! Something went wrong') #custom mensagge
+    print(e) # print error message
+else:
+    # Executed if the 'try' clause does not raise an execption
+    print(f.read())
+    f.close()
+finally:
+    # Executed no matter what happens
+    print("Executing Finally...")
+    pass
+```
+  
+[Video Example](https://www.youtube.com/watch?v=NIWwJbo-9_8)
+
+---
 ## _Title_
 Date: 2022-03-14
 
@@ -349,18 +377,22 @@ codigo
 ---
 ## _DUDAS A DESARROLLAR_
 
-pruebas unitarias?
-milestone?
-AirFlow?
-Azzure?
-AWS?
-VPN?
-Pipeline?
-PEP8?
-global python
-html.unescape python
-concurrent vs multiprocesing (libraries)
-multiprocesing vs multithreading
+pruebas unitarias? <br>
+milestone?<br>
+AirFlow?<br>
+Azzure?<br>
+AWS?<br>
+VPN?<br>
+Pipeline?<br>
+PEP8?<br>
+global python<br>
+html.unescape python<br>
+concurrent vs multiprocesing (libraries)<br>
+multiprocesing vs multithreading<br>
+crontab<br>
+digitalocean<br>
+proxy<br>
+expressvpn (linux)<br>
 
 ---
 
