@@ -365,6 +365,60 @@ finally:
 [Video Example](https://www.youtube.com/watch?v=NIWwJbo-9_8)
 
 ---
+## _Bounding Boxes_
+Date: 2022-04-25
+
+Conventions used in specifying a bounding box:
+
+There are 2 main conventions followed when representing bounding boxes:
+
+1. Specifying the box with respect to the coordinates of its top left, and the bottom right point.<br>
+![bbox_1](.images/bbox_1.jpeg)
+2. Specifying the box with respect to its center, and its width and height.<br>
+![bbox_2](.images/bbox_2.jpeg)
+
+**Converting between the conventions:**
+
+We can convert between the different forms of representing the bounding box, depending on our use case.
+
+1. xc = ( x1 + x2 ) / 2
+2. yc = ( y1 + y2 ) / 2
+3. width = ( x2 — x1)
+4. height = (y2 — y1)
+  
+[Fuente](https://medium.com/analytics-vidhya/basics-of-bounding-boxes-94e583b5e16c)
+
+---
+## _Cantidad de Request - Twitter API_
+Date: 2022-04-26
+
+Hashtag Count - Top 5000 TMDB
+| Probe #     | Set           | API Version |   EndPoint          | Total Count    | Time        | 
+| ----------- | -----------   | ----------- | -----------         | -----------    | ----------- |
+| 1           | top 5000 tmdb | v2          | Recent Tweets Count | 1638414        | 233min      | 
+| 2           | top 5000 tmdb | v2          | Recent Tweets Count | 1670701        | 255min      |  
+| 3           | top 100  imdb | v2          | Recent Tweets Count | 212522         | 0min 30s    |
+| 4           | top 100  imdb | v2          | Recent Tweets Count | 355676         | 0min 31s    |
+
+date/date set
+
+**Get Gender or Age**<br>
+Twitter API no provee información de edad o género.<br>
+Se podría determinar usando alguna AI analizando las imagenes de perfil y/o nombres de usuario.
+
+- [X] Hashtag Count
+- [X] genero
+- [X] con v2 buscar query hashtag de cada tweet y ver location
+- [X] PROBAR SI CON PAGINATOR ME TRAE USERS,PLACE => SI
+- [X] probar busqueda context.entity => una vez que tenemos todos los tweets filtramos por user.location, context.entity
+- [ ] comparar esto con busqueda hashtag + place_country v1
+- [ ] que api/version/access_level usamos? => se podrían crear varias cuentas de v2 / Elevated Access
+- [ ] cuantas request/min puedo hacer con paginator/recent_search?
+- [ ] Volver a hacer el count con una lista actualizada de tmdb!!
+- [ ] CONTEXT, para diferenciar de un libro, juego, etc. Twitter lo diferencia?
+
+
+---
 ## _Title_
 Date: 2022-03-14
 
@@ -393,6 +447,8 @@ crontab<br>
 digitalocean<br>
 proxy<br>
 expressvpn (linux)<br>
-
+wave <br>
+crear indice para las notas <br>
+curl (api)
 ---
 
