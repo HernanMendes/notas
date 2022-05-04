@@ -389,16 +389,66 @@ We can convert between the different forms of representing the bounding box, dep
 [Fuente](https://medium.com/analytics-vidhya/basics-of-bounding-boxes-94e583b5e16c)
 
 ---
+## _Selenium Ubuntu Setup_
+Date: 2022-05-02
+
+1. [Install Google Chrome](https://itsfoss.com/install-chrome-ubuntu/)
+   
+    ```sh
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    ```
+    ```sh
+    sudo dpkg -i google-chrome-stable_current_amd64.deb
+    ```
+    ```sh
+    google-chrome --version
+    ```
+    ```sh
+    wherei google-chrome
+    ```
+2. Install Chrome Driver
+    [Download](https://chromedriver.chromium.org/). Tiene que coincidir la versión de chrome con la del driver.<br>
+    ```sh
+    unzip chromedriver_linux64.zip
+    ```
+    ```sh
+    chmod +x chromedriver
+    ```
+    Mover a carpeta compartida
+    ```sh
+    sudo mv ~/chromedriver /usr/local/share/chromedriver
+    ```
+    Create links
+    ```sh
+    sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+    sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+    ```
+    Check chrome driver version
+    ```sh
+    chromedriver --version
+    ```
+3. Install Selenium
+   ```sh
+    pip install selenium
+    ```
+[Markdown CheatSheet](https://www.markdownguide.org/cheat-sheet/)
+
+---
+
 ## _Cantidad de Request - Twitter API_
 Date: 2022-04-26
 
 Hashtag Count - Top 5000 TMDB
-| Probe #     | Set           | API Version |   EndPoint          | Total Count    | Time        | 
-| ----------- | -----------   | ----------- | -----------         | -----------    | ----------- |
-| 1           | top 5000 tmdb | v2          | Recent Tweets Count | 1638414        | 233min      | 
-| 2           | top 5000 tmdb | v2          | Recent Tweets Count | 1670701        | 255min      |  
-| 3           | top 100  imdb | v2          | Recent Tweets Count | 212522         | 0min 30s    |
-| 4           | top 100  imdb | v2          | Recent Tweets Count | 355676         | 0min 31s    |
+| Probe # | Set           | API Version |   EndPoint          | Total Count | Time     | Date |
+| -----   | -----         | -----       | -----               | -----       | -----    | -----|
+| 1       | top 5000 tmdb | v2          | Recent Tweets Count | 1638414     | 233min   | 27 abr 2022 16∶24∶35 |
+| 2       | top 5000 tmdb | v2          | Recent Tweets Count | 1670701     | 255min   | 28 abr 2022 09∶34∶38 |
+| 3       | top 100  imdb | v2          | Recent Tweets Count | 212522      | 0min 30s | 28 abr 2022 09∶53∶07 |
+| 4       | top 100  imdb | v2          | Recent Tweets Count | 355676      | 0min 31s | 28 abr 2022 10∶26∶49 |
+| 5       | top 100  imdb | v2          | Recent Tweets Count | 415416      | 0min 29s | 28 abr 2022 15∶06∶35 |
+| 6       | imdb/tmdb clean| v2          | Recent Tweets Count | 1764389     | 244min   | 28 abr 2022 15∶06∶35|
+| 7       | 5000 tmdb mov | v2          | Recent Tweets Count | 4324384     | 241min   | 02 may 2022 17∶10∶25 |
+| 8       | 5000 tmdb tv | v2          | Recent Tweets Count | 5662733     | 247min   | 03 may 2022 10∶14∶58 |
 
 date/date set
 
@@ -411,13 +461,15 @@ Se podría determinar usando alguna AI analizando las imagenes de perfil y/o nom
 - [X] con v2 buscar query hashtag de cada tweet y ver location
 - [X] PROBAR SI CON PAGINATOR ME TRAE USERS,PLACE => SI
 - [X] probar busqueda context.entity => una vez que tenemos todos los tweets filtramos por user.location, context.entity
+- [X] CONTEXT, para diferenciar de un libro, juego, etc. Twitter lo diferencia? => filtrar por context, magia NO. En v1 no lo tenemos, pero podemos obtener el ID y buscar en v2
 - [ ] comparar esto con busqueda hashtag + place_country v1
-- [ ] que api/version/access_level usamos? => se podrían crear varias cuentas de v2 / Elevated Access
-- [ ] cuantas request/min puedo hacer con paginator/recent_search?
-- [ ] Volver a hacer el count con una lista actualizada de tmdb!!
-- [ ] CONTEXT, para diferenciar de un libro, juego, etc. Twitter lo diferencia?
-
-
+- [X] que api/version/access_level usamos? => se podrían crear varias cuentas de v2 / Elevated Access, v1 va en desuso
+- [X] Volver a hacer el count con una lista actualizada de tmdb!! => 4324384(movies) y 5662733(tv)
+- [X] cuantas request/min puedo hacer con paginator/recent_search? => 450 requests/15min, hasta 100tw/requests
+- [X] probar multicuenta con diferentes workers => BIEN
+- [ ] como guardar las keys?
+- [ ] ip
+- [ ] tomar todos los tweets de un set, limpiar, etc
 ---
 ## _Title_
 Date: 2022-03-14
