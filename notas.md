@@ -450,6 +450,7 @@ Hashtag Count - Top 5000 TMDB
 | 7       | 5000 tmdb mov | v2          | Recent Tweets Count | 4324384     | 241min   | 02 may 2022 17∶10∶25 |
 | 8       | 5000 tmdb tv | v2          | Recent Tweets Count | 5662733     | 247min   | 03 may 2022 10∶14∶58 |
 
+9774 488min
 date/date set
 
 **Get Gender or Age**<br>
@@ -467,9 +468,15 @@ Se podría determinar usando alguna AI analizando las imagenes de perfil y/o nom
 - [X] Volver a hacer el count con una lista actualizada de tmdb!! => 4324384(movies) y 5662733(tv)
 - [X] cuantas request/min puedo hacer con paginator/recent_search? => 450 requests/15min, hasta 100tw/requests
 - [X] probar multicuenta con diferentes workers => BIEN
-- [ ] como guardar las keys?
-- [ ] ip
-- [ ] tomar todos los tweets de un set, limpiar, etc
+- [X] tomar todos los tweets de un set
+- [ ] Guardar datos de los bots en un db
+- [ ] Rotar keys
+- [ ] Me bloquea la IP?
+- [ ] Filtrar por domain/entity
+- [ ] Clasificar según pais
+- [ ] Como se guardan las keys?
+- [ ] Como generar cuentas para bots?
+
 ---
 ## _Title_
 Date: 2022-03-14
@@ -501,6 +508,7 @@ proxy<br>
 expressvpn (linux)<br>
 wave <br>
 crear indice para las notas <br>
-curl (api)
+curl (api)<br>
+cloudflare
 ---
 
