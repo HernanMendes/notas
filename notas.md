@@ -456,11 +456,17 @@ Edit
 crontab -e
 ```
 
-**Example**
+**Example 1**
 Imprimir la hora a cada minuto en un archivo de texto
 ```sh
  * * * * * date >> /home/hernan/Desktop/hora.txt
 ```
+**Example 2**
+Execute python script the first day of every month at 00:01:00
+```sh
+1 0 1 * * /home/hernan/anaconda3/envs/bbhits/bin/python /home/hernan/Desktop/BB_Vision/Twitter_bots/load_bots_to_db/main.py
+```
+
 **Salir de NANO**
 CTRL + O
 ENTER
@@ -468,7 +474,7 @@ CTRL + X
 
 
 [Video](https://www.youtube.com/watch?v=lvW6Fw3Ghy8)
-
+[Crontab Guru](https://crontab.guru/)
 ---
 ## _Cantidad de Request - Twitter API_
 Date: 2022-04-26
@@ -504,14 +510,14 @@ Se podría determinar usando alguna AI analizando las imagenes de perfil y/o nom
 - [X] cuantas request/min puedo hacer con paginator/recent_search? => 450 requests/15min, hasta 100tw/requests
 - [X] probar multicuenta con diferentes workers => BIEN
 - [X] tomar todos los tweets de un set
-- [ ] Guardar datos de los bots en un db
+- [X] Guardar datos de los bots en un db
 - [ ] Rotar keys
 - [ ] Me bloquea la IP?
 - [ ] Filtrar por domain/entity
 - [ ] Clasificar según pais
 - [ ] Como se guardan las keys?
 - [ ] Como generar cuentas para bots?
-
+- [ ] Reset keys cada mes (crontab)
 ---
 ## _Title_
 Date: 2022-03-14
