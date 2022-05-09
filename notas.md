@@ -434,7 +434,42 @@ Date: 2022-05-02
 [Markdown CheatSheet](https://www.markdownguide.org/cheat-sheet/)
 
 ---
+## _Cron/Crontab_
+Date: 2022-05-09
 
+Administrador de linux que nos permite controlar los procesos que se ejecutan en segundo plano en intervalos de tiempo.
+
+Manual
+```sh
+man crontab
+```
+List process
+```sh
+crontab -l
+```
+Remove process
+```sh
+crontab -r
+```
+Edit
+```sh
+crontab -e
+```
+
+**Example**
+Imprimir la hora a cada minuto en un archivo de texto
+```sh
+ * * * * * date >> /home/hernan/Desktop/hora.txt
+```
+**Salir de NANO**
+CTRL + O
+ENTER
+CTRL + X
+
+
+[Video](https://www.youtube.com/watch?v=lvW6Fw3Ghy8)
+
+---
 ## _Cantidad de Request - Twitter API_
 Date: 2022-04-26
 
@@ -502,7 +537,6 @@ global python<br>
 html.unescape python<br>
 concurrent vs multiprocesing (libraries)<br>
 multiprocesing vs multithreading<br>
-crontab<br>
 digitalocean<br>
 proxy<br>
 expressvpn (linux)<br>
