@@ -518,6 +518,10 @@ Se podría determinar usando alguna AI analizando las imagenes de perfil y/o nom
 - [ ] Como se guardan las keys?
 - [ ] Como generar cuentas para bots?
 - [ ] Reset keys cada mes (crontab)
+- [ ] automatic detect monthly cap usage. client. error. respone.content
+- [ ] concurrent
+- [ ] crear al menos 15 cuentas
+- [ ] crear script que se fije en que fecha se bloqueo la cuenta y si paso un mes la desbloquee
 ---
 ## _Title_
 Date: 2022-03-14
