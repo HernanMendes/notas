@@ -475,6 +475,7 @@ CTRL + X
 
 [Video](https://www.youtube.com/watch?v=lvW6Fw3Ghy8)
 [Crontab Guru](https://crontab.guru/)
+
 ---
 ## _Cantidad de Request - Twitter API_
 Date: 2022-04-26
@@ -511,18 +512,41 @@ Se podría determinar usando alguna AI analizando las imagenes de perfil y/o nom
 - [X] probar multicuenta con diferentes workers => BIEN
 - [X] tomar todos los tweets de un set
 - [X] Guardar datos de los bots en un db
-- [ ] Rotar keys
-- [ ] Me bloquea la IP?
+- [X] Rotar keys => si devuelve 429, me fijo si es por 15min o por mes(en este caso bloqueo la cuenta), paso a la sig cuenta
+- [X] Me bloquea la IP?
+- [X] automatic detect monthly cap usage. client. error. respone.content
+- [X] Generar timeout que vuelva a correr el scraping desde el hashtag en el que se quedó?
 - [ ] Filtrar por domain/entity
 - [ ] Clasificar según pais
+    1. primero filtrar a mano. (IN) 
+    2. otros idiomas 東京
+    3. banderas (emojis)
+    4. country code
+    5. new yorñ (united states or jamaica?)
+
+    Librerías:
+        1. **pycountry**: esta buena para banderas, y códigos alpha_2, alpha_3
+        2. **locationtagger**: funciona muy bien pero en algunos casos fáciles, como por ejemplo Roma, Lazio o New Delhi no devuelve nada
+        3. 
+- [ ] Si tengo ubicacion del tweet usar esa, si no usar la del profile
 - [ ] Como se guardan las keys?
-- [ ] Como generar cuentas para bots?
-- [ ] Reset keys cada mes (crontab)
-- [ ] automatic detect monthly cap usage. client. error. respone.content
-- [ ] concurrent
-- [ ] crear al menos 15 cuentas
-- [ ] crear script que se fije en que fecha se bloqueo la cuenta y si paso un mes la desbloquee
+- [ ] Como generar cuentas para bots automaticamente? Escalable
+- [ ] Antes de obtener la bot_list fijarse si pasó un mes de bloqueado y desbloquear en ese caso.
+- [ ] Concurrent
+- [ ] Crear al menos 15 cuentas
+- [ ] Add log to the scripts. When finished, read the log to see if any error was detected
+  
 ---
+## _Tweets Get_
+Date: 2022-05-20
+
+|                    | Number  | Execution Time |
+| ------------------ | ------- | -------------- |
+| Total              | 5542581 |      N/A       |    
+| w/ User location   | 3115408 |      N/A       |
+| match Country List | 1203544 |     12 min     |
+---
+
 ## _Title_
 Date: 2022-03-14
 
